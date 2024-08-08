@@ -1,29 +1,24 @@
-public class RemoveElement{
-    public int removeElements(int[] nums, int val) {
-        int index = 0;
-        int n = nums.length;
-        while (index < n) {
-            if (nums[index] == val) {
-                nums[index] = nums[n - 1];
-                n--;
-            } else {
-                index++;
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int k = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[k] = nums[i];
+                k++;
             }
         }
-        return n;
+        return k;
     }
 
     public static void main(String[] args) {
-        RemoveElement removeElement = new RemoveElement();
-
-        int[] nums = {3, 2, 2, 3};
-        int val = 3;
-
-        int length = removeElement.removeElements(nums, val);
-
-        System.out.println("New Length: " + length);
-        System.out.print("Remaining elements: ");
-        for (int i = 0; i < length; i++) {
+        Solution solution = new Solution();
+        int[] nums = {1, 2, 3, 5, 4, 5};
+        int val = 5;
+        
+        int newLength = solution.removeElement(nums, val);
+        
+        System.out.print("Modified array: ");
+       for (int i = 0; i < newLength; i++) {
             System.out.print(nums[i] + " ");
         }
     }

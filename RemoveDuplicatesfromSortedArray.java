@@ -25,3 +25,36 @@ class Solution {
         }
     }
 }
+
+
+//Using TreeSet
+import java.util.TreeSet;
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        TreeSet<Integer> ts = new TreeSet<>();
+        
+        for (int num : nums) {     // Add elements to the TreeSet to remove duplicates
+            ts.add(num);
+        }
+        
+        int index = 0;           //Transfer elements from TreeSet back to the array
+        for (int num : ts) {
+            nums[index++] = num;
+        }
+
+        return ts.size();
+    }
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        int[] nums = {1, 2, 3, 2, 5, 5, 4};
+
+        int newLength = s.removeDuplicates(nums);
+        
+        System.out.println("Array after removing duplicates:");
+        for (int i = 0; i < newLength; i++) {
+            System.out.print(nums[i] + " ");
+        }
+    }
+}

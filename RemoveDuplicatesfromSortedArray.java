@@ -34,13 +34,13 @@ class Solution {
     public int removeDuplicates(int[] nums) {
         TreeSet<Integer> ts = new TreeSet<>();
         
-        for (int num : nums) {     // Add elements to the TreeSet to remove duplicates
-            ts.add(num);
+        for (int x : nums) {     // Add elements to the TreeSet to remove duplicates
+            ts.add(x);
         }
         
         int index = 0;           //Transfer elements from TreeSet back to the array
-        for (int num : ts) {
-            nums[index++] = num;
+        for (int x: ts) {
+            nums[index++] = x;
         }
 
         return ts.size();

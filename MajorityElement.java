@@ -1,4 +1,4 @@
-
+//Moores voting algo used to find majority element
 
 
 class Solution{

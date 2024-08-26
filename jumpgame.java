@@ -7,7 +7,7 @@ class Solution
         for (int i = 0; i < nums.length; i++)           
         {
            if (i > maxReach) {                   
-                return false;
+                return false; 
             }
             
             maxReach = Math.max(maxReach, i + nums[i]);           // iteration 1= 0+2=2=maxreach;

@@ -8,7 +8,7 @@ class Solution
           
         for (int i = 0; i < nums.length - 1; i++) 
         {
-            maxreach = Math.max(maxreach, i + nums[i]);
+            maxreach = Math.max(maxreach, i + nums[i]); 
 
             if (i == currentEnd) 
             {

@@ -8,7 +8,7 @@ Convert: "zbax" ➝ "(26)(2)(1)(24)" ➝ "262124" ➝ 262124
 Transform #1: 262124 ➝ 2 + 6 + 2 + 1 + 2 + 4 ➝ 17
 Transform #2: 17 ➝ 1 + 7 ➝ 8
 Return the resulting integer after performing the operations described above.*/
-
+ 
 class Solution 
 {
     public int getLucky(String s, int k) 
